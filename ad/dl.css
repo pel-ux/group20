@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-image: url(d.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Base logo style */
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Animation class */
+.animate-logo {
+  background: linear-gradient(45deg, black, rgb(255, 238, 0));
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: colorShift 4s ease-in-out infinite;
+}
+
+/* Keyframes for the color shift */
+@keyframes colorShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.logohover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: rgb(232, 236, 26);
+    border-bottom: 3px solid rgb(236, 204, 26);
+}
+
+nav{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 40%;
+    border-left: 3px solid rgb(255, 238, 0);
+    border-bottom: 3px solid rgb(255, 251, 0);
+    border-bottom-left-radius: 2rem;
+    padding: 1rem solid;
+    background-color: black;
+}
+
+nav.active{
+    display: block;
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+section.content{
+    display: flex;
+    justify-content: flex-end;/*pushes content to the right;*/
+    align-items: baseline;/*vertically center*/
+    padding-right: 90px;/*optional spacing from edge*/
+}
+
+.content{
+    color: beige;
+    padding: 30px;
+    max-width: 60px;
+    line-height: 1.6;
+    text-align: center;
+    position: bottom;
+}
+
+.content h2{
+    font-size: 28px;
+    color: rgb(251, 255, 0);
+    text-align: center;
+}
+
+.content span{
+    display: flex;
+    text-align: left;
+    color: rgb(204, 192, 192);
+    font-weight: bold;
+}
+
+.content img{
+    position: right;
+    text-align: right;
+    width: 300px;
+    align-items: right;
+    right: 100px;
+    margin-left: 300px;
+    max-width: 600px;
+}
+
+
+.bounce{
+    display: inline-block;
+    animation: bounce 1s infinite;
+    font-size: 24px;
+    color: beige;
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+}
